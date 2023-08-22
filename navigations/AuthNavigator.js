@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { Login, ResetPassword } from "../screens";
 import { COLORS, ROUTES } from "../constants";
 //import Login from "../screens/login";
+import DrawerNavigator from "./DrawerNavigator";
 
 const Stack = createStackNavigator();
 
@@ -29,11 +30,11 @@ function AuthNavigator() {
         options={{ headerShown: false }}
       />
       <Stack.Screen name={ROUTES.REST_PASSWORD} component={ResetPassword} />
-      {/* <Stack.Screen
-            name={ROUTES.HOME}
-            component={DrawerNavigator}
-            options={{headerShown: false}}
-          /> */}
+      <Stack.Screen
+        name={ROUTES.HOME}
+        component={DrawerNavigator}
+        options={{ headerShown: false }}
+      />
     </Stack.Navigator>
   );
 }

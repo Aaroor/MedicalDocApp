@@ -36,7 +36,7 @@ function LoginForm() {
 
   const onSubmit = () => {
     validate()
-      ? navigation.navigate(ROUTES.REST_PASSWORD)
+      ? navigation.navigate(ROUTES.HOME)
       : console.log("Validation Failed");
   };
 
