@@ -19,4 +19,8 @@ export default {
 
   SETTINGS_DETAIL: "Settings Detail",
   PROFILE: "My Profile",
+
+  MY_CASES: "My cases",
+  BOOK_MARKED: "Book Marked",
+  ALL_CASES: "All cases",
 };

@@ -10,3 +10,7 @@ export { default as Wallet } from "./home/Wallet";
 
 export { default as Notifications } from "./home/Notifications";
 export { default as Profile } from "./home/Profile";
+
+export { default as MyCases } from "./home/MyCases";
+export { default as BookMarked } from "./home/BookMarked";
+export { default as AllCases } from "./home/AllCases";

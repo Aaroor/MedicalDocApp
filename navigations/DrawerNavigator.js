@@ -14,8 +14,8 @@ function DrawerNavigator({ navigation }) {
       drawerContent={(props) => <CustomDrawer {...props} />}
       screenOptions={{
         headerShown: false,
-        // drawerActiveBackgroundColor: COLORS.primary,
-        // drawerActiveTintColor: COLORS.white,
+        //drawerActiveBackgroundColor: COLORS.primary,
+        //drawerActiveTintColor: COLORS.white,
         drawerLabelStyle: {
           marginLeft: -20,
         },
