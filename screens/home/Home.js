@@ -17,8 +17,9 @@ import {
   HStack,
   Avatar,
   Spacer,
+  Link,
 } from "native-base";
-import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import { Ionicons, MaterialIcons, Entypo } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
 import colors from "../../constants/colors";
 
@@ -28,7 +29,7 @@ const Home = () => {
       id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
       fullName: "Aafreen Khan",
       timeStamp: "12:47 PM",
-      recentText: "Good Day!",
+      recentText: "Heart Problem",
       avatarUrl:
         "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     },
@@ -36,7 +37,7 @@ const Home = () => {
       id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
       fullName: "Sujitha Mathur",
       timeStamp: "11:11 PM",
-      recentText: "Cheer up, there!",
+      recentText: "Eye Problem",
       avatarUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyEaZqT3fHeNrPGcnjLLX1v_W4mvBlgpwxnA&usqp=CAU",
     },
@@ -44,14 +45,14 @@ const Home = () => {
       id: "58694a0f-3da1-471f-bd96-145571e29d72",
       fullName: "Anci Barroco",
       timeStamp: "6:22 PM",
-      recentText: "Good Day!",
+      recentText: "Ear Problem",
       avatarUrl: "https://miro.medium.com/max/1400/0*0fClPmIScV5pTLoE.jpg",
     },
     {
       id: "68694a0f-3da1-431f-bd56-142371e29d72",
       fullName: "Aniket Kumar",
       timeStamp: "8:56 PM",
-      recentText: "All the best",
+      recentText: "Heart Problem",
       avatarUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr01zI37DYuR8bMV5exWQBSw28C1v_71CAh8d7GP1mplcmTgQA6Q66Oo--QedAN1B4E1k&usqp=CAU",
     },
@@ -59,7 +60,7 @@ const Home = () => {
       id: "28694a0f-3da1-471f-bd96-142456e29d72",
       fullName: "Kiara",
       timeStamp: "12:47 PM",
-      recentText: "I will call today.",
+      recentText: "Heart Problem",
       avatarUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU",
     },
@@ -67,7 +68,7 @@ const Home = () => {
       id: "28694a0f-3da1-471f-bd96-142456e29d73",
       fullName: "Kiara2",
       timeStamp: "12:47 PM",
-      recentText: "I will call today.",
+      recentText: "Heart Problem",
       avatarUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU",
     },
@@ -75,7 +76,7 @@ const Home = () => {
       id: "28694a0f-3da1-471f-bd96-142456e29d74",
       fullName: "Kiara3",
       timeStamp: "12:47 PM",
-      recentText: "I will call today.",
+      recentText: "Heart Problem",
       avatarUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU",
     },
@@ -83,7 +84,7 @@ const Home = () => {
       id: "28694a0f-3da1-471f-bd96-142456e29d75",
       fullName: "Kiara5",
       timeStamp: "12:47 PM",
-      recentText: "I will call today.",
+      recentText: "Heart Problem",
       avatarUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU",
     },
@@ -91,7 +92,7 @@ const Home = () => {
       id: "28694a0f-3da1-471f-bd96-142456e29d76",
       fullName: "Kiara6",
       timeStamp: "12:47 PM",
-      recentText: "I will call today.",
+      recentText: "Heart Problem",
       avatarUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU",
     },
@@ -99,7 +100,7 @@ const Home = () => {
       id: "28694a0f-3da1-471f-bd96-142456e29d77",
       fullName: "Kiara7",
       timeStamp: "12:47 PM",
-      recentText: "I will call today.",
+      recentText: "Heart Problem",
       avatarUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU",
     },
@@ -220,6 +221,7 @@ const Home = () => {
             Inbox
           </Heading> */}
             <FlatList
+              contentContainerStyle={{ paddingBottom: 60 }}
               data={data}
               renderItem={({ item }) => (
                 <Box
@@ -270,18 +272,100 @@ const Home = () => {
                       >
                         {item.recentText}
                       </Text>
+                      <Text
+                        _dark={{
+                          color: "warmGray.50",
+                        }}
+                        color="coolGray.800"
+                        bold
+                      >
+                        <Link href="https://nativebase.io">
+                          CID-123456789012
+                        </Link>
+                      </Text>
                     </VStack>
                     <Spacer />
-                    <Text
-                      fontSize="xs"
-                      _dark={{
-                        color: "warmGray.50",
-                      }}
-                      color="coolGray.800"
-                      alignSelf="flex-start"
-                    >
-                      {item.timeStamp}
-                    </Text>
+                    <VStack>
+                      <Text
+                        _dark={{
+                          color: "warmGray.50",
+                        }}
+                        color="coolGray.800"
+                        bold
+                      >
+                        HID-123456789012
+                      </Text>
+                      <Text
+                        fontSize="xs"
+                        _dark={{
+                          color: "warmGray.50",
+                        }}
+                        color="coolGray.800"
+                        alignSelf="flex-end"
+                      >
+                        01/07/2023
+                      </Text>
+                      <HStack alignSelf="flex-end">
+                        <Box alignItems="center">
+                          <IconButton
+                            icon={<Icon as={Entypo} name="edit" />}
+                            borderRadius="full"
+                            _icon={{
+                              color: "blue.500",
+                              size: "md",
+                            }}
+                            _hover={{
+                              bg: "orange.600:alpha.20",
+                            }}
+                            _pressed={{
+                              bg: "orange.600:alpha.20",
+                              _icon: {
+                                name: "edit",
+                              },
+                              _ios: {
+                                _icon: {
+                                  size: "2xl",
+                                },
+                              },
+                            }}
+                            _ios={{
+                              _icon: {
+                                size: "2xl",
+                              },
+                            }}
+                          />
+                        </Box>
+                        <Box alignItems="center">
+                          <IconButton
+                            icon={<Icon as={Entypo} name="bookmark" />}
+                            borderRadius="full"
+                            _icon={{
+                              color: "blue.500",
+                              size: "md",
+                            }}
+                            _hover={{
+                              bg: "orange.600:alpha.20",
+                            }}
+                            _pressed={{
+                              bg: "orange.600:alpha.20",
+                              _icon: {
+                                name: "bookmark",
+                              },
+                              _ios: {
+                                _icon: {
+                                  size: "2xl",
+                                },
+                              },
+                            }}
+                            _ios={{
+                              _icon: {
+                                size: "2xl",
+                              },
+                            }}
+                          />
+                        </Box>
+                      </HStack>
+                    </VStack>
                   </HStack>
                 </Box>
               )}
