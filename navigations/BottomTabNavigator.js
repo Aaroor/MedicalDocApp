@@ -10,6 +10,7 @@ import {
   MyCases,
   BookMarked,
   AllCases,
+  Profile,
 } from "../screens";
 import Icon from "@expo/vector-icons/Ionicons";
 import SettingsNavigator from "./SettingsNavigator";
@@ -17,6 +18,8 @@ import CustomTabBarButton from "../components/CustomTabBarButton";
 import CustomTabBar from "../components/CustomTabBar";
 import { useNavigation } from "@react-navigation/native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Fontisto } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
 
 const Tab = createBottomTabNavigator();
 
@@ -39,17 +42,18 @@ function BottomTabNavigator() {
         tabBarIcon: ({ color, size, focused }) => {
           let iconName;
           if (route.name === ROUTES.HOME_TAB) {
-            iconName = focused ? "ios-home-sharp" : "ios-home-outline";
+            iconName = focused ? "ios-home-sharp" : "ios-home-sharp";
+            return <Icon name={iconName} size={25} color={color} />;
           } else if (route.name === ROUTES.MY_CASES) {
-            iconName = focused ? "settings" : "settings-outline";
+            iconName = focused ? "doctor" : "doctor";
+            return <Fontisto name={iconName} size={25} color={color} />;
           } else if (route.name === ROUTES.BOOK_MARKED) {
-            iconName = focused ? "wallet" : "wallet-outline";
+            iconName = focused ? "bookmark" : "bookmark";
+            return <Icon name={iconName} size={25} color={color} />;
           } else if (route.name === ROUTES.ALL_CASES) {
-            iconName = focused
-              ? "md-notifications-sharp"
-              : "md-notifications-outline";
+            iconName = focused ? "medical-services" : "medical-services";
+            return <MaterialIcons name={iconName} size={25} color={color} />;
           }
-          return <Icon name={iconName} size={25} color={color} />;
         },
       })}
     >
@@ -155,6 +159,27 @@ function BottomTabNavigator() {
           },
         }}
       />
+      {/* <Tab.Screen
+        name={ROUTES.PROFILE}
+        component={Profile}
+        options={{
+          tabBarLabel: "My Profile",
+          title: "My Profile",
+          headerShown: true,
+          headerLeft: () => {
+            return (
+              <TouchableOpacity onPress={() => navigation.openDrawer()}>
+                <Icon
+                  name={Platform.OS === "ios" ? "ios-menu" : "md-menu"}
+                  size={30}
+                  color={COLORS.dark}
+                  style={{ marginLeft: 10 }}
+                />
+              </TouchableOpacity>
+            );
+          },
+        }}
+      /> */}
     </Tab.Navigator>
 
     // <Tab.Navigator

@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { DrawerActions, NavigationContainer } from "@react-navigation/native";
 import AuthNavigator from "./navigations/AuthNavigator";
 import { LogBox } from "react-native";
+import LeftNavigator from "./navigations/LeftNavigator";
 
 export default function App() {
   LogBox.ignoreLogs([
@@ -13,6 +14,7 @@ export default function App() {
     <NavigationContainer>
       {/* {isAuthenticated ? AuthNavigator : DrawerNavigator } */}
       <AuthNavigator />
+      {/* <LeftNavigator /> */}
     </NavigationContainer>
 
     // <Login />

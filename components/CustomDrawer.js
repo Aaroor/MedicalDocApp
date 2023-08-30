@@ -31,14 +31,6 @@ const CustomDrawer = (props) => {
         />
         {/* <DrawerItem
           icon={({ focused, color, size }) => (
-            <Icon name="home-sharp" size={18} color={color} />
-          )}
-          labelStyle={{ marginLeft: -20 }}
-          label="Home"
-          onPress={() => props.navigation.navigate(ROUTES.HOME_DRAWER)}
-        /> */}
-        <DrawerItem
-          icon={({ focused, color, size }) => (
             <Icon name="wallet" size={18} color={color} />
           )}
           labelStyle={{ marginLeft: -20 }}
@@ -53,6 +45,22 @@ const CustomDrawer = (props) => {
           label="Notifications"
           onPress={() => props.navigation.navigate(ROUTES.NOTIFICATIONS)}
         />
+        <DrawerItem
+          icon={({ focused, color, size }) => (
+            <Icon name="person-outline" size={18} color={color} />
+          )}
+          labelStyle={{ marginLeft: -20 }}
+          label="My Profile"
+          onPress={() => props.navigation.navigate(ROUTES.PROFILE)}
+        />
+        <DrawerItem
+          icon={({ focused, color, size }) => (
+            <Icon name="exit-outline" size={18} color={color} />
+          )}
+          labelStyle={{ marginLeft: -20 }}
+          label="Logout"
+          onPress={() => props.navigation.navigate(ROUTES.LOGIN)}
+        /> */}
         <DrawerItem
           icon={({ focused, color, size }) => (
             <Icon name="exit-outline" size={18} color={color} />
